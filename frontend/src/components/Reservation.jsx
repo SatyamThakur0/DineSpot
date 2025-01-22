@@ -18,7 +18,7 @@ const Reservation = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://dinespot-fx09.onrender.com/api/v1/reservation/send",
+        `${import.meta.env.VITE_BACKEND_URL}/api/v1/reservation/send`,
         { firstName, lastName, email, phone, date, time },
         {
           headers: {
